@@ -32,7 +32,7 @@ class Hospitales extends Component {
   render() {
     return (
       <div className="">
-        <h2>Hospitales - web</h2>
+        <h2>Hospitales</h2>
 
         { this.props.children }
 

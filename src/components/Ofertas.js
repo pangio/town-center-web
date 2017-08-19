@@ -32,7 +32,7 @@ class Ofertas extends Component {
   render() {
     return (
       <div className="">
-        <h2>Ofertas - web</h2>
+        <h2>Ofertas</h2>
 
         { this.props.children }
 

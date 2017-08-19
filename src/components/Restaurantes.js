@@ -32,7 +32,7 @@ class Restaurantes extends Component {
   render() {
     return (
       <div className="">
-        <h2>Restaurantes - web</h2>
+        <h2>Restaurantes</h2>
 
         { this.props.children }
 
