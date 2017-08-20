@@ -2,7 +2,7 @@ import React from 'react';
 import NavLink from './components/NavLink'
 import WebNavBar from './components/layout/WebNavBar'
 import WebFooter from './components/layout/WebFooter'
-import './index.css';
+import './main.css';
 
 class AppRouter extends React.Component {
   render() {

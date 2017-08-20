@@ -1,6 +1,6 @@
 import React from 'react';
 import NavLink from '../NavLink'
-import '../../index.css';
+import '../../main.css';
 
 class WebNavBar extends React.Component {
   render() {
@@ -15,7 +15,7 @@ class WebNavBar extends React.Component {
               <li><NavLink to="/cines">Cines</NavLink></li>
               <li><NavLink to="/ofertas">Ofertas</NavLink></li>
               <li><NavLink to="/hospitales">Hospitales</NavLink></li>
-              <li><NavLink to="/about">About</NavLink></li>
+              <li><NavLink to="/hotel">Hotel</NavLink></li>
               <li><NavLink to="/servicios">Servicios</NavLink></li>
             </ul>
           </div>

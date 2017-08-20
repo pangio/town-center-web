@@ -9,6 +9,7 @@ import Cines from './components/Cines'
 import Cine from './components/Cine'
 import Hospitales from './components/Hospitales'
 import Hospital from './components/Hospital'
+import Hotel from './components/Hotel'
 import Ofertas from './components/Ofertas'
 import Oferta from './components/Oferta'
 import Restaurantes from './components/Restaurantes'
@@ -17,7 +18,6 @@ import Servicios from './components/Servicios'
 import Servicio from './components/Servicio'
 import Tiendas from './components/Tiendas'
 import Tienda from './components/Tienda'
-import About from './components/About'
 
 render((
   <Router history={browserHistory}>
@@ -51,7 +51,7 @@ render((
         <Route path="/tiendas/:id" component={Tienda} />
       </Route>
 
-      <Route path="/about" component={About} />
+      <Route path="/hotel" component={Hotel} />
 
     </Route>
   </Router>
