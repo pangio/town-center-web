@@ -31,7 +31,7 @@ class Cines extends Component {
 
   render() {
     return (
-      <div className="">
+      <div className="center">
         <h2>Cines</h2>
 
         { this.props.children }
