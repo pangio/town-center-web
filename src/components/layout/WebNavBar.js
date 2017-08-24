@@ -1,5 +1,6 @@
 import React from 'react';
 import NavLink from '../NavLink'
+import ImageContainer from './ImageContainer'
 import '../../main.css';
 
 class WebNavBar extends React.Component {
@@ -9,7 +10,11 @@ class WebNavBar extends React.Component {
         <nav className="navbar navbar-default">
           <div className="container-fluid">
             <ul className="nav navbar-nav" role="nav">
-              <li><NavLink to="/" onlyActiveOnIndex>Home</NavLink></li>
+              <li className="logo">
+                <NavLink to="/" onlyActiveOnIndex>
+                  <ImageContainer path={require('../../assets/logo.png')} />
+                </NavLink>
+              </li>
               <li><NavLink to="/tiendas">Tiendas</NavLink></li>
               <li><NavLink to="/restaurantes">Restaurantes</NavLink></li>
               <li><NavLink to="/cines">Cines</NavLink></li>

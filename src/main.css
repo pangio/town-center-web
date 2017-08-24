@@ -18,3 +18,28 @@ body {
 .padding {
 	padding: 20px;
 }
+.logo {
+/*
+	width: 10px;
+	height: 10px;
+*/
+}
+.header-pic{
+	width: 900px;
+	height: 600px;
+}
+.navbar li {
+	/*margin-top: 15px;*/
+}
+.slider-offer-img {
+	min-width: 130px;
+	min-height: 140px;
+	width: 253px;
+	height: 187px;
+}
+.slider-store-img {
+	min-width: 130px;
+	min-height: 140px;
+	width: 253px;
+	height: 187px;
+}
