@@ -1,30 +1,51 @@
 import React from 'react';
 import NavLink from '../NavLink'
 import ImageContainer from './ImageContainer'
+import { Nav, Navbar, NavItem } from 'react-bootstrap'
 import '../../main.css';
 
 class WebNavBar extends React.Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-default">
-          <div className="container-fluid">
-            <ul className="nav navbar-nav" role="nav">
-              <li className="logo">
-                <NavLink to="/" onlyActiveOnIndex>
-                  <ImageContainer path={require('../../assets/logo.png')} />
-                </NavLink>
-              </li>
-              <li><NavLink to="/tiendas">Tiendas</NavLink></li>
-              <li><NavLink to="/restaurantes">Restaurantes</NavLink></li>
-              <li><NavLink to="/cines">Cines</NavLink></li>
-              <li><NavLink to="/ofertas">Ofertas</NavLink></li>
-              <li><NavLink to="/hospitales">Hospitales</NavLink></li>
-              <li><NavLink to="/hotel">Hotel</NavLink></li>
-              <li><NavLink to="/servicios">Servicios</NavLink></li>
-            </ul>
-          </div>
-        </nav>
+        <Navbar collapseOnSelect>
+          <Navbar.Header>
+            <Navbar.Brand>
+              <NavLink to="/" onlyActiveOnIndex>
+                <ImageContainer className='logo' path={require('../../assets/logo.png')} />
+              </NavLink>
+            </Navbar.Brand>
+            <Navbar.Toggle />
+          </Navbar.Header>
+          <Navbar.Collapse>
+            <Nav>
+              <NavItem eventKey={1} href="#">
+                <NavLink to="/" onlyActiveOnIndex>Home</NavLink>
+              </NavItem>
+              <NavItem eventKey={2} href="#">
+                <NavLink to="/tiendas">Tiendas</NavLink>
+              </NavItem>
+              <NavItem eventKey={3} href="#">
+                <NavLink to="/restaurantes">Restaurantes</NavLink>
+              </NavItem>
+              <NavItem eventKey={4} href="#">
+                <NavLink to="/cines">Cine</NavLink>
+              </NavItem>
+              <NavItem eventKey={5} href="#">
+                <NavLink to="/ofertas">Ofertas</NavLink>
+              </NavItem>
+              <NavItem eventKey={6} href="#">
+                <NavLink to="/hospitales">Hospital</NavLink>
+              </NavItem>
+              <NavItem eventKey={7} href="#">
+                <NavLink to="/hotel">Hotel</NavLink>
+              </NavItem>
+              <NavItem eventKey={8} href="#">
+                <NavLink to="/servicios">Servicios</NavLink>
+              </NavItem>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
       </div>
     )
   }

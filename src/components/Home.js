@@ -17,7 +17,6 @@ class Home extends Component {
 	        <br /><br />
 	        <Sections />
 	        <br /><br />
-	        <h2>Home</h2>
 		</div>
     );
   }

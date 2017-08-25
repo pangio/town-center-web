@@ -10,27 +10,20 @@ class SliderOffers extends React.Component {
     super(props);
     this.state = {
         settings: {
+          autoplay: true,
           arrows: true,
+          centerMode: true,
           dots: true,
           infinite: true,
-          speed: 500,
+          pauseOnHover: true,
           slidesToShow: 3,
-          slidesToScroll: 3
+          slidesToScroll: 3,
+          speed: 500,
         },
-        // imgs: {            
-        //     img1: '../../assets/home/img_offer.png',
-        //     img2: '../../assets/home/img_offer.png',
-        //     img3: '../../assets/home/img_offer.png'
-        // }
     }
   }
 
   componentWillMount() {
-    // let img1 = '../../assets/home/img_offer.png'
-    // let img2 = '../../assets/home/img_offer.png'
-    // let img3 = '../../assets/home/img_offer.png'
-    // let x = [img1, img2, img3]
-    // this.setState({imgs, x})
   }
   render() {
     return (
@@ -38,37 +31,37 @@ class SliderOffers extends React.Component {
             <Slider {...this.state.settings}>
                 <div className="center">
                     <NavLink to="/ofertas/1" >
-                        <img className="slider-offer-img" alt=''
+                        <img className="img-responsive slider-offer-img" alt=''
                             src={require('../../assets/ofertas/280x380_01.png')} />
                     </NavLink>
                 </div>
                 <div className="center">
                     <NavLink to="/ofertas/2" >
-                        <img className="slider-offer-img" alt=''
+                        <img className="img-responsive slider-offer-img" alt=''
                             src={require('../../assets/ofertas/280x380_02.png')} />
                     </NavLink>
                 </div>
                 <div className="center">
                     <NavLink to="/ofertas/3" >
-                        <img className="slider-offer-img" alt=''
+                        <img className="img-responsive slider-offer-img" alt=''
                             src={require('../../assets/ofertas/280x380_03.png')} />
                     </NavLink>
                 </div>
                 <div className="center">
                     <NavLink to="/ofertas/4" >
-                        <img className="slider-offer-img" alt=''
+                        <img className="img-responsive slider-offer-img" alt=''
                             src={require('../../assets/ofertas/280x380_04.png')} />
                     </NavLink>
                 </div>
                 <div className="center">
                     <NavLink to="/ofertas/5" >
-                        <img className="slider-offer-img" alt=''
+                        <img className="img-responsive slider-offer-img" alt=''
                             src={require('../../assets/ofertas/280x380_05.png')} />
                     </NavLink>
                 </div>
                 <div className="center">
                     <NavLink to="/ofertas/6" >
-                        <img className="slider-offer-img" alt=''
+                        <img className="img-responsive slider-offer-img" alt=''
                             src={require('../../assets/ofertas/280x380_06.png')} />
                     </NavLink>
                 </div>

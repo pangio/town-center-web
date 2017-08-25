@@ -10,12 +10,15 @@ class SliderStores extends React.Component {
     super(props);
     this.state = {
         settings: {
+          autoplay: true,
           arrows: true,
+          centerMode: true,
           dots: true,
           infinite: true,
-          speed: 500,
+          pauseOnHover: true,
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          speed: 500,
         },
     }
   }
@@ -28,37 +31,37 @@ class SliderStores extends React.Component {
             <Slider {...this.state.settings}>
                 <div className="center">
                     <NavLink to="/tiendas/1" >
-                        <img className="store-slider-img" alt=''
+                        <img className="img-responsive store-slider-img" alt=''
                             src={require('../../assets/tiendas/store_01.png')} />
                     </NavLink>
                 </div>
                 <div className="center">
                     <NavLink to="/tiendas/2" >
-                        <img className="store-slider-img" alt=''
+                        <img className="img-responsive store-slider-img" alt=''
                             src={require('../../assets/tiendas/store_02.png')} />
                     </NavLink>
                 </div>
                 <div className="center">
                     <NavLink to="/tiendas/3" >
-                        <img className="store-slider-img" alt=''
+                        <img className="img-responsive store-slider-img" alt=''
                             src={require('../../assets/tiendas/store_03.png')} />
                     </NavLink>
                 </div>
                 <div className="center">
                     <NavLink to="/tiendas/4" >
-                        <img className="store-slider-img" alt=''
+                        <img className="img-responsive store-slider-img" alt=''
                             src={require('../../assets/tiendas/store_04.png')} />
                     </NavLink>
                 </div>
                 <div className="center">
                     <NavLink to="/tiendas/5" >
-                        <img className="store-slider-img" alt=''
+                        <img className="img-responsive store-slider-img" alt=''
                             src={require('../../assets/tiendas/store_05.png')} />
                     </NavLink>
                 </div>
                 <div className="center">
                     <NavLink to="/tiendas/6" >
-                        <img className="store-slider-img" alt=''
+                        <img className="img-responsive store-slider-img" alt=''
                             src={require('../../assets/tiendas/store_06.png')} />
                     </NavLink>
                 </div>
