@@ -13,7 +13,7 @@ class SliderOffers extends React.Component {
           autoplay: true,
           arrows: true,
           centerMode: true,
-          dots: true,
+          // dots: true,
           infinite: true,
           pauseOnHover: true,
           slidesToShow: 3,
