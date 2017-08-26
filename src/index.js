@@ -7,7 +7,6 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 import Home from './components/Home'
 import Cines from './components/Cines'
 import Cine from './components/Cine'
-import Hospitales from './components/Hospitales'
 import Hospital from './components/Hospital'
 import Hotel from './components/Hotel'
 import Ofertas from './components/Ofertas'
@@ -29,8 +28,7 @@ render((
         <Route path="/cines/:id" component={Cine} />
       </Route>
 
-      <Route path="/hospitales" component={Hospitales} >
-        <Route path="/hospitales/:id" component={Hospital} />
+      <Route path="/hospital" component={Hospital} >
       </Route>
 
       <Route path="/ofertas" component={Ofertas} >

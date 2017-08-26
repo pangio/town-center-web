@@ -63,10 +63,17 @@ body {
 .footer-color {
     background-color: #f8f8f8;
 }
+.more-info-btn {
+	color: white;
+	background-color: green;
+	font-size: 14px;
+}
 .padding {
 	padding: 20px;
 }
-
-
+.hospital-section {
+	padding-top: 20px;
+	padding-left: 10%;
+}
 /*.header-pic{width: 900px;height: 600px;}*/
 /*.navbar li {margin-top: 15px;}*/

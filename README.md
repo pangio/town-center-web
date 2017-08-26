@@ -9,7 +9,7 @@ npm start
 # routes
 ```
 localhost:3000/
-localhost:3000/hospitales
+localhost:3000/hospital
 localhost:3000/ofertas
 localhost:3000/restaurantes
 localhost:3000/servicios

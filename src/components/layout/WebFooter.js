@@ -12,7 +12,7 @@ class WebFooter extends React.Component {
           <p><NavLink to="/restaurantes">Restaurantes</NavLink></p>
           <p><NavLink to="/ofertas">Ofertas</NavLink></p>
           <p><NavLink to="/cines">Cines</NavLink></p>
-          <p><NavLink to="/hospitales">Hospitales</NavLink></p>
+          <p><NavLink to="/hospital">Hospital</NavLink></p>
           <p><NavLink to="/hotel">Hotel</NavLink></p>
           <p><NavLink to="/servicios">Servicios</NavLink></p>
         </ul>
