@@ -13,8 +13,6 @@ import Ofertas from './components/Ofertas'
 import Oferta from './components/Oferta'
 import Restaurantes from './components/Restaurantes'
 import Restaurant from './components/Restaurant'
-import Servicios from './components/Servicios'
-import Servicio from './components/Servicio'
 import Tiendas from './components/Tiendas'
 import Tienda from './components/Tienda'
 
@@ -38,12 +36,6 @@ render((
       <Route path="/restaurantes" component={Restaurantes} >
         <Route path="/restaurantes/:id" component={Restaurant} />
       </Route>
-
-      <Route path="/servicios" component={Servicios} >
-        <Route path="/servicios/:id" component={Servicio} />
-      </Route>
-
-      <Route path="/servicios" component={Servicios} />
 
       <Route path="/tiendas" component={Tiendas} >
         <Route path="/tiendas/:id" component={Tienda} />

@@ -13,7 +13,7 @@ class Sections extends React.Component {
                         <img className="img-responsive col-xs-3 sections-img" alt=''
                             src={require('../../assets/home/btn_compras.png')} />
                     </NavLink>
-                    <NavLink to="/servicios" >
+                    <NavLink to="/" >
                         <img className="img-responsive col-xs-3 sections-img" alt=''
                             src={require('../../assets/home/btn_eventos.png')} />
                     </NavLink>

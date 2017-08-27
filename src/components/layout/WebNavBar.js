@@ -40,9 +40,6 @@ class WebNavBar extends React.Component {
               <NavItem eventKey={7} href="#">
                 <NavLink to="/hotel">Hotel</NavLink>
               </NavItem>
-              <NavItem eventKey={8} href="#">
-                <NavLink to="/servicios">Servicios</NavLink>
-              </NavItem>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
