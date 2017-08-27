@@ -9,6 +9,16 @@ body {
     text-decoration: underline !important;
     text-decoration-color: orange !important;
 }
+.navbar {
+	/*fixme*/
+	/*background-image: url('assets/tiendas/store_01.png');*/
+}
+.navbar img {
+	width: 100%;
+}
+.navbar-toggle {
+	background-color: white;
+}
 .logo {
 	margin: -10px;
     padding: 0;
@@ -87,6 +97,9 @@ body {
 }
 .padding {
 	padding: 20px;
+}
+.padding-v {
+	padding: 10px 0;
 }
 .hospital-section {
 	padding-top: 20px;
