@@ -5,6 +5,7 @@ class Hospital extends Component {
   render() {
     return (
 		<div className='page-container'>
+            <h2 className='background'><span>Hospital & Consultorios en Costa del Este</span></h2>
 	        <img className="img-responsive" alt=''
 	            src={require('../assets/hospital/header.png')} />
 

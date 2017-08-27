@@ -32,6 +32,7 @@ class Cines extends Component {
   render() {
     return (
       <div className='center page-container'>
+        <h2 className='background'><span>¿Vamos a cine?</span></h2>
         <img className="img-responsive" alt=''
             src={require('../assets/cine/header.png')} />
         { this.props.children }

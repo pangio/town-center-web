@@ -32,6 +32,8 @@ class Tiendas extends Component {
   render() {
     return (
       <div className='center page-container'>
+        <h2 className='background'><span>¡Compras!</span></h2>
+
         <img className="img-responsive" alt=''
             src={require('../assets/tiendas/header.png')} />
 

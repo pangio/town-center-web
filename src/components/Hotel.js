@@ -5,6 +5,7 @@ class Hotel extends Component {
   render() {
     return (
 		<div className='center page-container'>
+            <h2 className='background'><span>¿Hotel?</span></h2>
 	        <img className="img-responsive" alt=''
 	            src={require('../assets/hotel/header.png')} />
 
