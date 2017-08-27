@@ -33,7 +33,7 @@ body {
     -webkit-text-fill-color: orange;
     text-decoration: none;
 	padding: 5%;
-	z-index: 9999;
+	z-index: 1000;
 }
 .slick-arrow.slick-next {
 	padding: 15%;
