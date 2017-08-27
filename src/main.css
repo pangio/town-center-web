@@ -15,7 +15,9 @@ body {
     width: 120px;
     height: 40px;
 }
-
+.page-container {
+	padding-top: 50px;
+}
 /* sliders */
 .slider-store-img {
 	/*margin: 0 auto;*/

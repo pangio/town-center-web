@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 class Hospital extends Component {
   render() {
     return (
-		<div>
+		<div className='page-container'>
 	        <img className="img-responsive" alt=''
 	            src={require('../assets/hospital/header.png')} />
 

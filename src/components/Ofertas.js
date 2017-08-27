@@ -31,7 +31,7 @@ class Ofertas extends Component {
 
   render() {
     return (
-      <div className="center">
+      <div className='center page-container'>
         <h2>Ofertas</h2>
 
         { this.props.children }

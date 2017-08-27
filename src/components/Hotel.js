@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 class Hotel extends Component {
   render() {
     return (
-		<div className="center">
+		<div className='center page-container'>
 	        <img className="img-responsive" alt=''
 	            src={require('../assets/hotel/header.png')} />
 

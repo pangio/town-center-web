@@ -10,7 +10,7 @@ class Home extends Component {
   render() {
     // var classes = classNames('header-pic', 'center');
     return (
-		<div className="center">
+		<div className='center page-container'>
 	        <SliderStores />
 	        <br /><br />
 	        <SliderOffers />
