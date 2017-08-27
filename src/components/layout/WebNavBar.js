@@ -8,7 +8,7 @@ class WebNavBar extends React.Component {
   render() {
     return (
       <div>
-        <Navbar collapseOnSelect>
+        <Navbar collapseOnSelect fixedTop>
           <Navbar.Header>
             <Navbar.Brand>
               <NavLink to="/" onlyActiveOnIndex>

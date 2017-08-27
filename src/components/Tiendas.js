@@ -32,10 +32,10 @@ class Tiendas extends Component {
   render() {
     return (
       <div className="center">
-        <h2>Tiendas</h2>
+        <img className="img-responsive" alt=''
+            src={require('../assets/tiendas/header.png')} />
 
         { this.props.children }
-
         <ul>
 		{
 		  this.state.stores.length > 0 &&

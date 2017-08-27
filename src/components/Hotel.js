@@ -4,9 +4,12 @@ import React, { Component } from 'react';
 class Hotel extends Component {
   render() {
     return (
-    	<div className='center'>
+		<div className="center">
 	        <img className="img-responsive" alt=''
 	            src={require('../assets/hotel/header.png')} />
+
+	        { this.props.children }
+
 	    	<div className='padding'>
 	    		<p className=''>250 llaves de la cadena de hoteles Bern 
 	    		donde podrán hospedarse sus familiares, ejecutivos o turistas

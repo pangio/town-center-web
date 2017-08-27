@@ -32,10 +32,10 @@ class Restaurantes extends Component {
   render() {
     return (
       <div className="center">
-        <h2>Restaurantes</h2>
+        <img className="img-responsive" alt=''
+            src={require('../assets/resto/header.png')} />
 
         { this.props.children }
-
         <ul>
         {
           this.state.restaurants.length > 0 &&

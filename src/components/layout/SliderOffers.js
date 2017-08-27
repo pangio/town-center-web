@@ -10,10 +10,10 @@ class SliderOffers extends React.Component {
     super(props);
     this.state = {
         settings: {
-          autoplay: true,
+          autoplay: false,
           arrows: true,
           centerMode: true,
-          // dots: true,
+          dots: false,
           infinite: true,
           pauseOnHover: true,
           slidesToShow: 3,
