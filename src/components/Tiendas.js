@@ -1,13 +1,13 @@
-import NavLink from './NavLink'
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import StoreList from './StoreList'
+// import _ from 'underscore'
 
 class Tiendas extends Component {
     constructor(props) {
-    super(props);
+    super(props)
       this.state = {
         stores: [],
-    };
-
+    }
     this.fetchAllStores = this.fetchAllStores.bind(this)
   }
 
@@ -17,19 +17,22 @@ class Tiendas extends Component {
   }
 
   fetchAllStores() {
-    return fetch('http://localhost:8000/api/tiendas')
-      .then((response) => response.json())
-      .then((responseJson) => {
-        this.setState({ stores: responseJson.data })
-        console.log(responseJson)
-        return responseJson.data
+    fetch('http://localhost:8000/api/tiendas')
+      .then(response => response.json())
+      .then(response => {
+        this.setState({ stores: JSON.parse(response.data) })
       })
       .catch((error) => {
         console.error(error)
-      });
+      })
+  }
+
+  isLoaded() {
+    return this.state.stores !== []
   }
 
   render() {
+    // <StoreList storeList={_.take(this.state.stores, 10)} />
     return (
       <div className='center page-container'>
         <h2 className='background'><span>¡Compras!</span></h2>
@@ -38,21 +41,13 @@ class Tiendas extends Component {
             src={require('../assets/tiendas/header.png')} />
 
         { this.props.children }
-        <ul>
-		{
-		  this.state.stores.length > 0 &&
-		  this.state.stores.map(function(store, i) {
-            return (
-            	<li key={i}>
-	              <NavLink to={`/tiendas/${i}`}>{store.name}</NavLink>
-              </li>
-            )
-          })
+    		{
+          this.isLoaded() &&
+          <StoreList storeList={this.state.stores} />
         }
-        </ul>
       </div>
     );
   }
 }
 
-export default Tiendas;
+export default Tiendas

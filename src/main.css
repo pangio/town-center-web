@@ -33,6 +33,24 @@ body {
 	/*margin: 0 auto;*/
 	padding: 0 20px;
 }
+
+/*store badges*/
+.store-sm-img {
+	padding: 1px;
+	margin-left: 11px;
+	max-width: 100px;
+	height: 100px;
+	background-color: black;
+	border-radius: 3px;
+}
+.store-sm-txt {
+    margin: 5px;
+    padding: 5px;
+    white-space: pre-wrap; 
+    overflow: hidden;
+    /*text-overflow: ellipsis; */
+}
+
 .slider-offer-img {
 	margin: 0 auto;
 	padding: 0 5px;
@@ -76,6 +94,7 @@ body {
 /* commons */
 .center {
 	text-align: center;
+	margin: 0 auto;
 }
 .footer-color {
     background-color: #f8f8f8;
@@ -98,6 +117,10 @@ body {
 .padding {
 	padding: 20px;
 }
+.badge {
+    color: black;
+ 	font-weight: 500;    
+}
 .padding-v {
 	padding: 10px 0;
 }
@@ -108,6 +131,13 @@ body {
 /*.header-pic{width: 900px;height: 600px;}*/
 /*.navbar li {margin-top: 15px;}*/
 
+.tienda-box {
+	width: 250px;
+	height: 110px;
+	background-color: lightgray;
+    border-radius: 5px;
+    margin: 5px;
+}
 
 /*background line for heading*/
 h2.background {
