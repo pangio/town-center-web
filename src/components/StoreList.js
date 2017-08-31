@@ -1,26 +1,26 @@
-import React from 'react';
+import React from 'react'
 import StoreBadge from './StoreBadge'
 
 class StoreList extends React.Component {
   constructor() {
-    super();
+    super()
     this.state = {
       search: ''
-    };
+    }
   }
 
   updateSearch(event) {
     this.setState({
       search: event.target.value.substr(0, 10)
-    });
+    })
   }
 
   render() {
     let filteredStores = this.props.storeList.filter(
       (store) => {
-        return store.name.toLowerCase().includes(this.state.search.toLowerCase());
+        return store.name.toLowerCase().includes(this.state.search.toLowerCase())
       }
-    );
+    )
 
     return (
       <div className='row center'>

@@ -1,13 +1,13 @@
-import NavLink from './NavLink'
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import RestoList from './RestoList'
+import _ from 'underscore'
 
 class Restaurantes extends Component {
     constructor(props) {
-    super(props);
+    super(props)
       this.state = {
         restaurants: [],
-    };
-
+    }
     this.fetchAllRestaurants = this.fetchAllRestaurants.bind(this)
   }
 
@@ -17,19 +17,22 @@ class Restaurantes extends Component {
   }
 
   fetchAllRestaurants() {
-    return fetch('http://localhost:8000/api/restaurantes')
-      .then((response) => response.json())
-      .then((responseJson) => {
-        this.setState({ restaurants: responseJson.data })
-        console.log(responseJson)
-        return responseJson.data
+    fetch('http://localhost:8000/api/restaurantes')
+      .then(response => response.json())
+      .then(response => {
+        this.setState({ restaurants: JSON.parse(response.data) })
       })
       .catch((error) => {
         console.error(error)
-      });
+      })
+  }
+
+  isLoaded() {
+    return this.state.restaurants !== []
   }
 
   render() {
+    // <RestoList restoList={_.take(this.state.restaurants, 10)} />
     return (
       <div className='center page-container'>
         <h2 className='background'><span>¡Quiero ir a comer!</span></h2>
@@ -38,21 +41,14 @@ class Restaurantes extends Component {
             src={require('../assets/resto/header.png')} />
 
         { this.props.children }
-        <ul>
         {
-          this.state.restaurants.length > 0 &&
-          this.state.restaurants.map(function(restaurant, i) {
-            return (
-              <li key={i}>
-                <NavLink to={`/restaurantes/${i}`}>{restaurant.name}</NavLink>
-              </li>
-            )
-          })
+          this.isLoaded() &&
+          <RestoList restoList={_.filter(this.state.restaurants, function(r) {
+            return r.type === 'restaurant' || r.type === 'coffee'
+          })} />
         }
-        </ul>
       </div>
-    );
+    )
   }
 }
-
-export default Restaurantes;
+export default Restaurantes

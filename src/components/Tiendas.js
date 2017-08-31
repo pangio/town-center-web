@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import StoreList from './StoreList'
-// import _ from 'underscore'
+import _ from 'underscore'
 
 class Tiendas extends Component {
     constructor(props) {
@@ -43,10 +43,12 @@ class Tiendas extends Component {
         { this.props.children }
     		{
           this.isLoaded() &&
-          <StoreList storeList={this.state.stores} />
+          <StoreList storeList={_.filter(this.state.stores, function(s) {
+            return s.type === 'store'
+          })} />
         }
       </div>
-    );
+    )
   }
 }
 

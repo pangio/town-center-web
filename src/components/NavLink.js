@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router'
 
-class NavLink extends Component {
+class NavLink extends React.Component {
   render() {
     return <Link {...this.props } activeClassName="active"/>
   }
