@@ -17,7 +17,8 @@ class Restaurantes extends Component {
   }
 
   fetchAllRestaurants() {
-    fetch('http://localhost:8000/api/restaurantes')
+    // fetch('http://localhost:8000/api/restaurantes')
+    fetch('http://192.168.0.9:8000/api/restaurantes')
       .then(response => response.json())
       .then(response => {
         this.setState({ restaurants: JSON.parse(response.data) })
@@ -32,7 +33,6 @@ class Restaurantes extends Component {
   }
 
   render() {
-    // <RestoList restoList={_.take(this.state.restaurants, 10)} />
     return (
       <div className='center page-container'>
         <h2 className='background'><span>¡Quiero ir a comer!</span></h2>

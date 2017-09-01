@@ -16,6 +16,12 @@ class RestoList extends React.Component {
     })
   }
 
+  onClick(event) {
+    this.setState({
+      search: ''
+    })
+  }
+
   render() {
     let filteredRestoList = this.props.restoList.filter(
       (resto) => {
@@ -25,17 +31,21 @@ class RestoList extends React.Component {
 
     return (
       <div className='row center'>
-        <input className='text' placeholder='Buscar...' type='text' value={this.state.search} onChange={this.updateSearch.bind(this)} />
+        <input className='text' placeholder='Buscar...' type='text' value={this.state.search} 
+          onChange={this.updateSearch.bind(this)}
+          onClick={this.onClick.bind(this)} />
+
         <hr />
           <div>
-            { filteredRestoList.map((resto, i) => {
-              return (
-                <NavLink to={`/restaurantes/${i}`} key={i} >
-                    <RestoBadge resto={resto} key={i} />
-                </NavLink>
-              )
-            }) 
-          }
+            {
+              filteredRestoList.map((resto, i) => {
+                return (
+                  <NavLink to={`/restaurantes/${resto.name}`} key={i} >
+                      <RestoBadge resto={resto} key={i} />
+                  </NavLink>
+                )
+              })
+            }
           </div>
         </div>
     )
