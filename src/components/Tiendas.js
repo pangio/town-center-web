@@ -17,7 +17,8 @@ class Tiendas extends Component {
   }
 
   fetchAllStores() {
-    fetch('http://localhost:8000/api/tiendas')
+    // fetch('http://localhost:8000/api/tiendas')
+    fetch('http://192.168.0.9:8000/api/tiendas')
       .then(response => response.json())
       .then(response => {
         this.setState({ stores: JSON.parse(response.data) })
@@ -32,7 +33,6 @@ class Tiendas extends Component {
   }
 
   render() {
-    // <StoreList storeList={_.take(this.state.stores, 10)} />
     return (
       <div className='center page-container'>
         <h2 className='background'><span>¡Compras!</span></h2>

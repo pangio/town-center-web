@@ -1,5 +1,6 @@
 import React from 'react'
 import StoreBadge from './StoreBadge'
+import NavLink from './NavLink'
 
 class StoreList extends React.Component {
   constructor() {
@@ -15,6 +16,12 @@ class StoreList extends React.Component {
     })
   }
 
+  onClick(event) {
+    this.setState({
+      search: ''
+    })
+  }
+
   render() {
     let filteredStores = this.props.storeList.filter(
       (store) => {
@@ -24,12 +31,21 @@ class StoreList extends React.Component {
 
     return (
       <div className='row center'>
-        <input className='text' placeholder='Buscar...' type='text' value={this.state.search} onChange={this.updateSearch.bind(this)} />
+        <input className='text' placeholder='Buscar...' type='text' 
+          value={this.state.search}
+          onChange={this.updateSearch.bind(this)}
+          onClick={this.onClick.bind(this)} />
         <hr />
           <div>
-            { filteredStores.map((store, i) => {
-              return <StoreBadge store={store} key={i} />
-            }) }
+            {
+              filteredStores.map((store, i) => {
+                return (
+                  <NavLink to={`/tiendas/${store.name}`} key={i} >
+                      <StoreBadge store={store} key={i} />
+                  </NavLink>
+                )
+              })
+            }
           </div>
         </div>
     )

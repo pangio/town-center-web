@@ -1,14 +1,9 @@
 import React from 'react';
-// name
-// description
-// url
-// hours
-// level
-// local
+
 class StoreBadge extends React.Component {
   render() {
     return (
-		<div className='tienda-box badge col-xs-6'>
+		<div className='tienda-box badge'>
 			<div className='row'>
 				<div>
 			        <img className='store-sm-img img-responsive col-xs-4' alt=''
