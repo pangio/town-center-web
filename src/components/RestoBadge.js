@@ -2,12 +2,13 @@ import React from 'react';
 
 class RestoBadge extends React.Component {
   render() {
+	const s3url = 'https://s3.amazonaws.com/towncenterweb/restaurantes/'
     return (
 		<div className='tienda-box badge'>
 			<div className='row'>
 				<div>
 					<img className='store-sm-img img-responsive col-xs-4' alt=''
-						src={require('../assets/tiendas/ic_puma.png')} />
+						src={s3url + this.props.resto.image_url} />
 		        </div>
 				<div className='col-xs-7 store-sm-txt'>
 					<p><strong>{this.props.resto.name}</strong></p>

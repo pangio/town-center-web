@@ -40,7 +40,7 @@ body {
 	margin-left: 11px;
 	max-width: 100px;
 	height: 100px;
-	background-color: black;
+	background-color: transparent;
 	border-radius: 3px;
 }
 .store-sm-txt {
@@ -138,7 +138,11 @@ body {
     border-radius: 5px;
     margin: 5px;
 }
-
+.search {
+	margin-top: 20px;
+	border-radius: 3px;
+	padding: 5px;
+}
 /*background line for heading*/
 h2.background {
     margin: 40px 0;
