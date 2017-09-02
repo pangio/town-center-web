@@ -4,31 +4,37 @@ import '../../main.css';
 
 class WebFooter extends React.Component {
   render() {
+    const s3url = 'https://s3.amazonaws.com/towncenterweb/assets/'
+
     return (
-      <div className='center footer-color'>
-        <div className='row center padding-v'>
-            <span className='footer-imgs'>
+      <div className='row'>
+        <div className='col-xs-3 footer-left'/>
+          <div className='center col-xs-6'>
+            <div className='row center padding-v'>
+                <span className='footer-imgs'>
+                    <NavLink to='/' >
+                        <img className='img-responsive donde-img' alt=''
+                            src={s3url + 'img_donde.png'} />
+                    </NavLink>
+                    <NavLink to='/' >
+                        <img className='img-responsive donde-img' alt=''
+                            src={s3url + 'btn_estasconsuerte.png'} />
+                    </NavLink>
+                </span>
+            </div>
+            <div className='row center padding-v'>
                 <NavLink to='/' >
-                    <img className='img-responsive donde-img' alt=''
-                        src={require('../../assets/home/img_donde.png')} />
+                    <img className='footer-icon' alt=''
+                        src={s3url + 'ic_instagram.png'} />
                 </NavLink>
                 <NavLink to='/' >
-                    <img className='img-responsive donde-img' alt=''
-                        src={require('../../assets/home/btn_estasconsuerte.png')} />
+                    <img className='footer-icon' alt=''
+                        src={s3url + 'ic_facebook.png'} />
                 </NavLink>
-            </span>
-        </div>
-        <div className='row center padding-v'>
-            <NavLink to='/' >
-                <img className='footer-icon' alt=''
-                    src='https://image.flaticon.com/icons/svg/124/124010.svg' />
-            </NavLink>
-            <NavLink to='/' >
-                <img className='footer-icon' alt=''
-                    src='https://image.flaticon.com/icons/svg/61/61164.svg' />
-            </NavLink>
-            <a className='footer-url' href='/'><strong>towncenter.com.pa</strong></a>
-        </div>
+                <a className='footer-url' href='/'><strong>towncenter.com.pa</strong></a>
+            </div>
+          </div>
+        <div className='col-xs-3 footer-right'/>
       </div>
     )
   }
