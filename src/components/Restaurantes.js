@@ -38,7 +38,7 @@ class Restaurantes extends Component {
         <h2 className='background'><span>¡Quiero ir a comer!</span></h2>
 
         <img className="img-responsive" alt=''
-            src={require('../assets/resto/header.png')} />
+            src='https://s3.amazonaws.com/towncenterweb/assets/header-resto.png' />
 
         { this.props.children }
         {

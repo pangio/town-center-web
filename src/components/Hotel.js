@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import NavLink from '../NavLink'
 
 class Hotel extends Component {
   render() {
@@ -7,7 +6,7 @@ class Hotel extends Component {
 		<div className='center page-container'>
             <h2 className='background'><span>¿Hotel?</span></h2>
 	        <img className="img-responsive" alt=''
-	            src={require('../assets/hotel/header.png')} />
+	            src='https://s3.amazonaws.com/towncenterweb/assets/header-hotel.png' />
 
 	        { this.props.children }
 

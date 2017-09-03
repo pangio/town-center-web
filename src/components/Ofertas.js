@@ -32,24 +32,12 @@ class Ofertas extends Component {
   render() {
     return (
       <div className='center page-container'>
-        <h2>Ofertas</h2>
+        <h2 className='background'><span>¡Las Mejores Ofertas!</span></h2>
 
-        { this.props.children }
-
-        <ul>
-        {
-          this.state.sales.length > 0 &&
-          this.state.sales.map(function(sale, i) {
-            return (
-              <li key={i}>
-                <NavLink to={`/ofertas/${i}`}>{sale.name}</NavLink>
-              </li>
-            )
-          })
-        }
-        </ul>
+        <img className="img-responsive" alt=''
+            src='https://s3.amazonaws.com/towncenterweb/assets/header-ofertas.png' />
       </div>
-    );
+    )
   }
 }
 

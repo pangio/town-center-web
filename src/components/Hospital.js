@@ -7,7 +7,7 @@ class Hospital extends Component {
 		<div className='page-container'>
             <h2 className='background'><span>Hospital & Consultorios en Costa del Este</span></h2>
 	        <img className="img-responsive" alt=''
-	            src={require('../assets/hospital/header.png')} />
+	            src='https://s3.amazonaws.com/towncenterweb/assets/header-hospital.png' />
 
 	    	<div className='padding'>
 	    		<p className='center'>

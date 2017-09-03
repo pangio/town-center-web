@@ -34,7 +34,7 @@ class Cines extends Component {
       <div className='center page-container'>
         <h2 className='background'><span>¿Vamos a cine?</span></h2>
         <img className="img-responsive" alt=''
-            src={require('../assets/cine/header.png')} />
+            src='https://s3.amazonaws.com/towncenterweb/assets/header-cine.png' />
         { this.props.children }
 
         <ul>
