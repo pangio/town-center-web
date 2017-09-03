@@ -138,7 +138,15 @@ body {
 }
 .badge {
     color: black;
- 	font-weight: 500;    
+ 	font-weight: 500;
+ 	padding: 0px;
+}
+.lightgray {
+	color: lightgray;
+}
+.store-badge-location {
+    border-top: lightgrey;
+    border-top-style: ridge;
 }
 .padding-v {
 	padding: 10px 0;
@@ -148,11 +156,14 @@ body {
 	padding-left: 10%;
 }
 .tienda-box {
+    text-align: left;
 	width: 250px;
-	height: 110px;
-	background-color: lightgray;
+	/*height: 110px;*/
+	background-color: white;
     border-radius: 5px;
     margin: 5px;
+    border-style: groove;
+    border-color: lightgray;
 }
 .search {
 	margin-top: 20px;
