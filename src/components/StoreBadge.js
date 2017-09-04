@@ -8,8 +8,8 @@ class StoreBadge extends React.Component {
 	  padding: 1
 	}
     return (
-		<div className='tienda-box badge'>
-			<img className='img-responsive col-xs-4' alt=''
+		<div className='store-badge badge'>
+			<img className='img-responsive col-xs-4 store-badge-img' alt=''
 				style={style}
 				src={s3url + this.props.store.image_url} />
 			<div className='col-xs-7 store-sm-txt'>
@@ -18,7 +18,7 @@ class StoreBadge extends React.Component {
 				<br />
 	    	</div>
 
-			<div className='col-xs-12 center padding-v store-badge-location'>
+			<div className='col-xs-12 center padding-v badge-location'>
 		        <img alt='' src={assetsurl + 'ic_geo.png'} />
 		        <span className='lightgray'>{this.props.store.level} - {this.props.store.local}</span>
 	    	</div>
