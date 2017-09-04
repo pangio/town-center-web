@@ -26,43 +26,26 @@ class SliderStores extends React.Component {
   componentWillMount() {
   }
   render() {
+    const s3url = 'https://s3.amazonaws.com/towncenterweb/tiendas/home/'
     return (
         <div>
             <Slider {...this.state.settings}>
                 <div className="center">
-                    <NavLink to="/tiendas/1" >
+                    <NavLink to="/tiendas/Samsung%20Experience%20Store" >
                         <img className="img-responsive slider-store-img" alt=''
-                            src={require('../../assets/tiendas/store_01.png')} />
+                            src={s3url + 'ic_samsung.png'} />
                     </NavLink>
                 </div>
                 <div className="center">
-                    <NavLink to="/tiendas/2" >
+                    <NavLink to="/tiendas/Puma" >
                         <img className="img-responsive slider-store-img" alt=''
-                            src={require('../../assets/tiendas/store_02.png')} />
+                            src={s3url + 'ic_puma.png'} />
                     </NavLink>
                 </div>
                 <div className="center">
-                    <NavLink to="/tiendas/3" >
+                    <NavLink to="/tiendas/Pandora" >
                         <img className="img-responsive slider-store-img" alt=''
-                            src={require('../../assets/tiendas/store_03.png')} />
-                    </NavLink>
-                </div>
-                <div className="center">
-                    <NavLink to="/tiendas/4" >
-                        <img className="img-responsive slider-store-img" alt=''
-                            src={require('../../assets/tiendas/store_04.png')} />
-                    </NavLink>
-                </div>
-                <div className="center">
-                    <NavLink to="/tiendas/5" >
-                        <img className="img-responsive slider-store-img" alt=''
-                            src={require('../../assets/tiendas/store_05.png')} />
-                    </NavLink>
-                </div>
-                <div className="center">
-                    <NavLink to="/tiendas/6" >
-                        <img className="img-responsive slider-store-img" alt=''
-                            src={require('../../assets/tiendas/store_06.png')} />
+                            src={s3url + 'ic_pandora.png'} />
                     </NavLink>
                 </div>
             </Slider>
