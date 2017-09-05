@@ -1,5 +1,5 @@
 import React from 'react'
-import RestoBadge from './RestoBadge'
+import RestoMapBadge from './RestoMapBadge'
 import NavLink from './NavLink'
 
 class Restaurant extends React.Component {
@@ -36,9 +36,9 @@ class Restaurant extends React.Component {
   render() {
     return (
     	this.isLoaded() &&
-	    <NavLink to={`/restaurantes/${this.state.restaurant.name}`}>
-	    	<RestoBadge resto = {this.state.restaurant} />
-	    </NavLink>
+          <NavLink to={`/restaurantes/${this.state.restaurant.name}`}>
+              <RestoMapBadge resto = {this.state.restaurant} />
+          </NavLink>
     )
   }
 }

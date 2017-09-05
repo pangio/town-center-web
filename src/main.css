@@ -149,6 +149,9 @@ body {
     border-top-style: ridge;
     border-width: 1px;
 }
+.badge-location-img {
+	padding: 0 10px;
+}
 .padding-v {
 	padding: 10px 0;
 }
@@ -169,7 +172,20 @@ body {
 .resto-badge {
     text-align: left;
 	width: 200px;
-    min-height: 300px;
+    /*min-height: 300px;*/
+	background-color: white;
+    border-radius: 0px;
+    margin: 5px;
+    border-style: double;
+    border-width: 1px;
+    border-color: lightgray;
+}
+.float-none {
+	float: none;
+}
+.resto-map-badge {
+    text-align: left;
+	width: 300px;
 	background-color: white;
     border-radius: 0px;
     margin: 5px;

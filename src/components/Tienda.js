@@ -1,5 +1,5 @@
 import React from 'react'
-import StoreBadge from './StoreBadge'
+import StoreMapBadge from './StoreMapBadge'
 import NavLink from './NavLink'
 
 class Tienda extends React.Component {
@@ -37,7 +37,7 @@ class Tienda extends React.Component {
     return (
 		this.isLoaded() &&
 		<NavLink to={`/tiendas/${this.state.store.name}`}>
-			<StoreBadge store = {this.state.store} />
+			<StoreMapBadge store = {this.state.store} />
 		</NavLink>
     )
   }
