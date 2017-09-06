@@ -18,8 +18,8 @@ class Restaurant extends React.Component {
 
   fetchRestaurant() {
   	let id = this.props.params.id
-    fetch('http://localhost:8000/api/restaurantes/'+ id)
-    // fetch('http://192.168.0.9:8000/api/restaurantes/'+ id)
+    // fetch('http://localhost:8000/api/restaurantes/'+ id)
+    fetch('http://192.168.0.9:8000/api/restaurantes/'+ id)
       .then(response => response.json())
       .then(response => {
         this.setState({ restaurant: response.data.Item })

@@ -1,3 +1,6 @@
+import Select from 'react-select';
+import 'react-select/dist/react-select.css';
+
 import React from 'react'
 import RestoBadge from './RestoBadge'
 import NavLink from './NavLink'
@@ -6,8 +9,24 @@ class RestoList extends React.Component {
   constructor() {
     super()
     this.state = {
-      search: ''
+      search: '',
+      categories: [
+      { value:'Pastas', label: 'Pastas'} ,
+        { value:'Heladería', label: 'Heladería'} ,
+        { value:'Café', label: 'Café'}
+      ],
+      selectedCategory: ''
     }
+    this.handleOnChangeCategory = this.handleOnChangeCategory.bind(this)
+    // this.fetchAllCategories = this.fetchAllCategories.bind(this)
+  }
+
+  componentWillMount() {
+    // console.log('fetching all Categories...')
+    // this.fetchAllCategories()
+    this.setState({
+      selectedCategory: 'Pastas'
+    })
   }
 
   updateSearch(event) {
@@ -22,10 +41,20 @@ class RestoList extends React.Component {
     })
   }
 
+  handleOnChangeCategory(event) {
+    if (event) {      
+      this.setState({selectedCategory: event.value})
+    }
+
+    // console.log(this.state.selectedCategory)
+  }
+
   render() {
     let filteredRestoList = this.props.restoList.filter(
       (resto) => {
-        return resto.name.toLowerCase().includes(this.state.search.toLowerCase())
+          return resto.name.toLowerCase().includes(this.state.search.toLowerCase()) &&
+              resto.category !== undefined && 
+              resto.category.toLowerCase() === this.state.selectedCategory.toLowerCase()
       }
     )
 
@@ -35,7 +64,15 @@ class RestoList extends React.Component {
           onChange={this.updateSearch.bind(this)}
           onClick={this.onClick.bind(this)} />
 
-        <hr />
+          <Select
+              placeholder='Filtrar por categoría'
+              className='search'
+              name='form-field-name'
+              value={this.state.selectedCategory}
+              options={this.state.categories}
+              onChange={this.handleOnChangeCategory}
+          />
+
           <div>
             {
               filteredRestoList.map((resto, i) => {
