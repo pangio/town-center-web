@@ -13,8 +13,8 @@ import Ofertas from './components/Ofertas'
 import Oferta from './components/Oferta'
 import Restaurantes from './components/restaurants/Restaurantes'
 import Restaurant from './components/restaurants/Restaurant'
-import Tiendas from './components/Tiendas'
-import Tienda from './components/Tienda'
+import Tiendas from './components/stores/Tiendas'
+import Tienda from './components/stores/Tienda'
 
 render((
   <Router history={browserHistory}>

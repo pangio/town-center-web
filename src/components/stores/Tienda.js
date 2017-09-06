@@ -1,6 +1,6 @@
 import React from 'react'
 import StoreMapBadge from './StoreMapBadge'
-import NavLink from './NavLink'
+import NavLink from '../NavLink'
 
 class Tienda extends React.Component {
     constructor(props) {
