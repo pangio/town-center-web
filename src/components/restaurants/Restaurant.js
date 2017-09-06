@@ -1,6 +1,6 @@
 import React from 'react'
 import RestoMapBadge from './RestoMapBadge'
-import NavLink from './NavLink'
+import NavLink from '../NavLink'
 
 class Restaurant extends React.Component {
     constructor(props) {

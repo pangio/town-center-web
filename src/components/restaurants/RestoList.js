@@ -3,7 +3,7 @@ import 'react-select/dist/react-select.css';
 
 import React from 'react'
 import RestoBadge from './RestoBadge'
-import NavLink from './NavLink'
+import NavLink from '../NavLink'
 
 class RestoList extends React.Component {
   constructor() {
