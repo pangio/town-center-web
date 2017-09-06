@@ -200,9 +200,17 @@ body {
     min-height: 90px;
 }
 .search {
+    display: inline-block;
 	margin-top: 20px;
 	border-radius: 3px;
 	padding: 5px;
+	max-width: 100px;
+}
+.Select {
+    display: inline-block;
+}
+.Select-input{
+	width: 200px;
 }
 .pull-left {
 	text-align: left;

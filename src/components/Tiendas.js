@@ -17,8 +17,8 @@ class Tiendas extends Component {
   }
 
   fetchAllStores() {
-    fetch('http://localhost:8000/api/tiendas')
-    // fetch('http://192.168.0.9:8000/api/tiendas')
+    // fetch('http://localhost:8000/api/tiendas')
+    fetch('http://192.168.0.9:8000/api/tiendas')
       .then(response => response.json())
       .then(response => {
         this.setState({ stores: JSON.parse(response.data) })
