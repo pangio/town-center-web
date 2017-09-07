@@ -5,8 +5,7 @@ import { render } from 'react-dom'
 import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 
 import Home from './components/Home'
-import Cines from './components/Cines'
-import Cine from './components/Cine'
+import Cines from './components/movies/Cines'
 import Hospital from './components/Hospital'
 import Hotel from './components/Hotel'
 import Ofertas from './components/Ofertas'
@@ -23,7 +22,6 @@ render((
       <IndexRoute component={Home} />
 
       <Route path="/cines" component={Cines} >
-        <Route path="/cines/:id" component={Cine} />
       </Route>
 
       <Route path="/hospital" component={Hospital} >

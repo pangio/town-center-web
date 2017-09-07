@@ -54,16 +54,31 @@ body {
 .slick-arrow.slick-prev:before, .slick-arrow.slick-next:before {
 	font-size: 40px
 }
-.slick-arrow.slick-prev, .slick-arrow.slick-next {
+.slick-arrow.slick-prev {
     position: absolute;
     -webkit-text-fill-color: orange;
     text-decoration: none;
-	padding: 5%;
+	margin-left: 2%;
 	z-index: 1000;
 }
+
 .slick-arrow.slick-next {
-	padding: 15%;
+    position: absolute;
+    -webkit-text-fill-color: orange;
+    text-decoration: none;
+	margin-right: 5%;
+	z-index: 1000;
 }
+
+@media (max-width: 1024px) {
+	.slick-arrow.slick-prev {
+		margin-left: 5%;
+	}
+	.slick-arrow.slick-next {
+	 	margin-right: 10%;
+	}
+}
+
 
 /* sections */
 .sections-container .sections-heading {
