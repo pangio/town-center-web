@@ -3,7 +3,6 @@ import React from 'react';
 class MovieBadge extends React.Component {
   render() {
 	const s3url = 'https://s3.amazonaws.com/towncenterweb/peliculas/'
-	const assetsurl = 'https://s3.amazonaws.com/towncenterweb/assets/'
     const padding1 = { padding: 1 }
     const margin0 = { margin:0 }
     return (

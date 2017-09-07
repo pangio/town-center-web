@@ -8,8 +8,7 @@ import Home from './components/Home'
 import Cines from './components/movies/Cines'
 import Hospital from './components/Hospital'
 import Hotel from './components/Hotel'
-import Ofertas from './components/Ofertas'
-import Oferta from './components/Oferta'
+import Ofertas from './components/sales/Ofertas'
 import Restaurantes from './components/restaurants/Restaurantes'
 import Restaurant from './components/restaurants/Restaurant'
 import Tiendas from './components/stores/Tiendas'
@@ -28,7 +27,6 @@ render((
       </Route>
 
       <Route path="/ofertas" component={Ofertas} >
-        <Route path="/ofertas/:id" component={Oferta} />
       </Route>
 
       <Route path="/restaurantes" component={Restaurantes} >

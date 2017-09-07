@@ -8,15 +8,15 @@ class Cines extends Component {
       this.state = {
         movies: [],
     }
-    this.fetchAllMovives = this.fetchAllMovives.bind(this)
+    this.fetchAllMovies = this.fetchAllMovies.bind(this)
   }
 
   componentWillMount() {
     console.log('fetching all Movies...')
-    this.fetchAllMovives()
+    this.fetchAllMovies()
   }
 
-  fetchAllMovives() {
+  fetchAllMovies() {
     // fetch('http://localhost:8000/api/cines')
     fetch('http://192.168.0.9:8000/api/cines')
       .then(response => response.json())
@@ -43,7 +43,7 @@ class Cines extends Component {
         {
           this.isLoaded() &&
           <MoviesList moviesList={_.filter(this.state.movies, function(m) {
-            return m.show === true && m.web_image_url !== undefined
+            return m.web_image_url !== undefined
           })} />
         }
       </div>
