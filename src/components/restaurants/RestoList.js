@@ -4,30 +4,35 @@ import 'react-select/dist/react-select.css';
 import React from 'react'
 import RestoBadge from './RestoBadge'
 import NavLink from '../NavLink'
+import _ from 'underscore'
 
 class RestoList extends React.Component {
   constructor() {
     super()
     this.state = {
+      categories: [],
       search: '',
-      categories: [
-      { value:'Pastas', label: 'Pastas'} ,
-        { value:'Heladería', label: 'Heladería'} ,
-        { value:'Café', label: 'Café'}
-      ],
       selectedCategory: ''
     }
     this.handleOnChangeCategory = this.handleOnChangeCategory.bind(this)
-    // this.fetchAllCategories = this.fetchAllCategories.bind(this)
+    this.getCategories = this.getCategories.bind(this)
   }
 
-  componentWillMount() {
-    // console.log('fetching all Categories...')
-    // this.fetchAllCategories()
-    this.setState({
-      selectedCategory: 'Pastas'
+  getCategories() {
+    let options = []
+    let categories = _.pluck(this.props.restoList, 'category')
+    categories = _.uniq(categories)
+    categories = _.filter(categories, function(c) { return c !== undefined })
+    _.each(categories, function(label,i){
+      let obj = { value: label, label: label }
+      options.push(obj)
     })
+    return options
   }
+
+  // componentWillMount() {
+  //   console.log('fetching all Categories...')
+  // }
 
   updateSearch(event) {
     this.setState({
@@ -36,17 +41,13 @@ class RestoList extends React.Component {
   }
 
   onClick(event) {
-    this.setState({
-      search: ''
-    })
+    this.setState({search: ''})
   }
 
   handleOnChangeCategory(event) {
     if (event) {      
       this.setState({selectedCategory: event.value})
     }
-
-    // console.log(this.state.selectedCategory)
   }
 
   render() {
@@ -57,6 +58,8 @@ class RestoList extends React.Component {
               resto.category.toLowerCase() === this.state.selectedCategory.toLowerCase()
       }
     )
+
+    let options = this.getCategories()
 
     return (
       <div className='row center'>
@@ -69,7 +72,7 @@ class RestoList extends React.Component {
               className='search'
               name='form-field-name'
               value={this.state.selectedCategory}
-              options={this.state.categories}
+              options={options}
               onChange={this.handleOnChangeCategory}
           />
 
