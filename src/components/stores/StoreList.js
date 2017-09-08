@@ -4,31 +4,34 @@ import 'react-select/dist/react-select.css';
 import React from 'react'
 import StoreBadge from './StoreBadge'
 import NavLink from '../NavLink'
+import _ from 'underscore'
 
 class StoreList extends React.Component {
   constructor() {
     super()
     this.state = {
       search: '',
-      categories: [
-      { value:'Tecnología', label: 'Tecnología'} ,
-      { value:'Mujer', label: 'Mujer'} ,
-      { value:'Hombre', label: 'Hombre'} ,
-      { value:'Sports', label: 'Sports'}
-      ],
       selectedCategory: ''
     }
     this.handleOnChangeCategory = this.handleOnChangeCategory.bind(this)
-    // this.fetchAllCategories = this.fetchAllCategories.bind(this)
+    this.getCategories = this.getCategories.bind(this)
   }
 
-  componentWillMount() {
-    // console.log('fetching all Categories...')
-    // this.fetchAllCategories()
-    this.setState({
-      selectedCategory: 'mujer'
+  getCategories() {
+    let options = []
+    let categories = _.pluck(this.props.storeList, 'category')
+    categories = _.uniq(categories)
+    categories = _.filter(categories, function(c) { return c !== undefined })
+    _.each(categories, function(label,i){
+      let obj = { value: label, label: label }
+      options.push(obj)
     })
+    return options
   }
+
+  // componentWillMount() {
+  //   console.log('fetching all Categories...')
+  // }
 
   updateSearch(event) {
     this.setState({
@@ -59,6 +62,8 @@ class StoreList extends React.Component {
       }
     )
 
+    let options = this.getCategories()
+
     return (
       <div className='row center'>
         <div className='col-xs-6 float-none'>
@@ -73,7 +78,7 @@ class StoreList extends React.Component {
           className='search'
           name='form-field-name'
           value={this.state.selectedCategory}
-          options={this.state.categories}
+          options={options}
           onChange={this.handleOnChangeCategory}
         />
 
