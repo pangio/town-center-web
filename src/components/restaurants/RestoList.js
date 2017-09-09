@@ -12,7 +12,7 @@ class RestoList extends React.Component {
     this.state = {
       categories: [],
       search: '',
-      selectedCategory: ''
+      selectedCategory: 'Todas'
     }
     this.handleOnChangeCategory = this.handleOnChangeCategory.bind(this)
     this.getCategories = this.getCategories.bind(this)
@@ -27,12 +27,9 @@ class RestoList extends React.Component {
       let obj = { value: label, label: label }
       options.push(obj)
     })
+    options.push({ value: 'Todas', label: 'Todas' })
     return options
   }
-
-  // componentWillMount() {
-  //   console.log('fetching all Categories...')
-  // }
 
   updateSearch(event) {
     this.setState({
@@ -53,6 +50,9 @@ class RestoList extends React.Component {
   render() {
     let filteredRestoList = this.props.restoList.filter(
       (resto) => {
+          if (this.state.selectedCategory === 'Todas') {
+              return resto.name.toLowerCase().includes(this.state.search.toLowerCase())
+          }
           return resto.name.toLowerCase().includes(this.state.search.toLowerCase()) &&
               resto.subcategory !== undefined && 
               resto.subcategory.toLowerCase() === this.state.selectedCategory.toLowerCase()

@@ -11,7 +11,7 @@ class StoreList extends React.Component {
     super()
     this.state = {
       search: '',
-      selectedCategory: ''
+      selectedCategory: 'Todas'
     }
     this.handleOnChangeCategory = this.handleOnChangeCategory.bind(this)
     this.getCategories = this.getCategories.bind(this)
@@ -26,12 +26,9 @@ class StoreList extends React.Component {
       let obj = { value: label, label: label }
       options.push(obj)
     })
+    options.push({ value: 'Todas', label: 'Todas' })
     return options
   }
-
-  // componentWillMount() {
-  //   console.log('fetching all Categories...')
-  // }
 
   updateSearch(event) {
     this.setState({
@@ -54,6 +51,9 @@ class StoreList extends React.Component {
   render() {
     let filteredStores = this.props.storeList.filter(
       (store) => {
+          if (this.state.selectedCategory === 'Todas') {
+              return store.name.toLowerCase().includes(this.state.search.toLowerCase())
+          }
           return store.name.toLowerCase().includes(this.state.search.toLowerCase()) &&
               store.subcategory !== undefined && 
               store.subcategory.toLowerCase() === this.state.selectedCategory.toLowerCase()
