@@ -44,7 +44,7 @@ class Restaurantes extends Component {
         {
           this.isLoaded() &&
           <RestoList restoList={_.filter(this.state.restaurants, function(r) {
-            return r.type === 'restaurant' || r.type === 'coffee'
+            return r.category === 'restaurant' || r.category === 'coffee'
           })} />
         }
       </div>

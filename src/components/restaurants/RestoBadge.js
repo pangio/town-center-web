@@ -16,7 +16,7 @@ class RestoBadge extends React.Component {
 			<div className='row' style={margin0}>
 				<div className='col-xs-12 store-sm-txt'>
 					<p><strong>{this.props.resto.name}</strong></p>
-					<p>{this.props.resto.hours}</p>
+					<p>{this.props.resto.status} - {this.props.resto.hours}</p>
 					<br />
 		    	</div>
 	    	</div>
@@ -24,7 +24,7 @@ class RestoBadge extends React.Component {
 			<div className='row' style={margin0}>
 				<div className='col-xs-12 center padding-v badge-location'>
 			        <img alt='' src={assetsurl + 'ic_geo.png'} />
-			        <span className='lightgray'>{this.props.resto.level} - {this.props.resto.local}</span>
+			        <span className='lightgray'>{this.props.resto.local}</span>
 		    	</div>
 	    	</div>
     	</div>

@@ -80,7 +80,7 @@ class RestoList extends React.Component {
             {
               filteredRestoList.map((resto, i) => {
                 return (
-                  <NavLink to={`/restaurantes/${resto.name}`} key={i} >
+                  <NavLink to={`/restaurantes/${resto.local}`} key={i} >
                       <RestoBadge resto={resto} key={i} />
                   </NavLink>
                 )

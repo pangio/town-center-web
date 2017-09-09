@@ -23,21 +23,21 @@ class RestoMapBadge extends React.Component {
 			<div className='row' style={margin0}>
 				<div className='col-xs-12 padding-v badge-location'>
 			        <img className='badge-location-img' alt='' src={assetsurl + 'ic_geo.png'} />
-			        <span className='lightgray'>Abierto {this.props.resto.hours}</span>
+			        <span className='lightgray'>{this.props.resto.status} {this.props.resto.hours}</span>
 		    	</div>
 	    	</div>
 
 			<div className='row' style={margin0}>
 				<div className='col-xs-12 padding-v badge-location'>
 			        <img className='badge-location-img' alt='' src={assetsurl + 'ic_geo.png'} />
-			        <span className='lightgray'>Acerca de</span>
+			        <span className='lightgray'>{this.props.resto.url}</span>
 		    	</div>
 	    	</div>
 
 			<div className='row' style={margin0}>
 				<div className='col-xs-12 padding-v badge-location'>
 			        <img className='badge-location-img' alt='' src={assetsurl + 'ic_geo.png'} />
-			        <span className='lightgray'>{this.props.resto.level} - {this.props.resto.local}</span>
+			        <span className='lightgray'>{this.props.resto.local}</span>
 		    	</div>
 	    	</div>
     	</div>
