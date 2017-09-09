@@ -17,8 +17,7 @@ class Cines extends Component {
   }
 
   fetchAllMovies() {
-    // fetch('http://localhost:8000/api/cines')
-    fetch('http://192.168.0.9:8000/api/cines')
+    fetch('/api/cines')
       .then(response => response.json())
       .then(response => {
         this.setState({ movies: JSON.parse(response.data) })

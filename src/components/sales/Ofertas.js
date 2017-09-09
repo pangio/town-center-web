@@ -17,8 +17,7 @@ class Ofertas extends Component {
   }
 
   fetchAllSales() {
-    // fetch('http://localhost:8000/api/ofertas')
-    fetch('http://192.168.0.9:8000/api/ofertas')
+    fetch('/api/ofertas')
       .then(response => response.json())
       .then(response => {
         this.setState({ sales: JSON.parse(response.data) })

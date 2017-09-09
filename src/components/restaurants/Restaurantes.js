@@ -17,8 +17,7 @@ class Restaurantes extends Component {
   }
 
   fetchAllRestaurants() {
-    // fetch('http://localhost:8000/api/restaurantes')
-    fetch('http://192.168.0.9:8000/api/restaurantes')
+    fetch('/api/restaurantes')
       .then(response => response.json())
       .then(response => {
         this.setState({ restaurants: JSON.parse(response.data) })

@@ -18,8 +18,7 @@ class Tienda extends React.Component {
 
   fetchStore() {
   	let id = this.props.params.id
-    // fetch('http://localhost:8000/api/tiendas/'+ id)
-    fetch('http://192.168.0.9:8000/api/tiendas/'+ id)
+    fetch('/api/tiendas/'+ id)
       .then(response => response.json())
       .then(response => {
         this.setState({ store: response.data.Item })

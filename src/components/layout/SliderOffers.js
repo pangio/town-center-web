@@ -33,9 +33,8 @@ class SliderOffers extends React.Component {
   }
 
   fetchAllSalesForHomeSlider() {
-    // fetch('http://localhost:8000/api/ofertas')
-    // OFERTAS PARA HOME
-    fetch('http://192.168.0.9:8000/api/ofertas')
+    // fetch('/ofertas/semana')
+    fetch('/api/ofertas')
       .then(response => response.json())
       .then(response => {
         let responseJson = JSON.parse(response.data)
