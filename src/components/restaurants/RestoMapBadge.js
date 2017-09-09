@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import ImgCache from '../layout/ImgCache'
 
 class RestoMapBadge extends React.Component {
   render() {
@@ -12,7 +13,7 @@ class RestoMapBadge extends React.Component {
 		<div className='badge resto-map-badge col-xs-6 float-none'>
 			<div style={margin0}>
 				<img className='img-responsive col-xs-6 padding' alt=''
-					src={s3url + this.props.resto.image_url} />
+					src='https://s3.amazonaws.com/towncenterweb/restaurantes/ic_haagendazs.png' />
 	    	</div>
 			<div>
 				<div className='col-xs-5 store-sm-txt padding'>
@@ -22,30 +23,37 @@ class RestoMapBadge extends React.Component {
 
 			<div className='row' style={margin0}>
 				<div className='col-xs-12 padding-v badge-location'>
-			        <img className='badge-location-img' alt='' src={assetsurl + 'ic_geo.png'} />
+					<ImgCache
+						classNames={'badge-location-img'}
+						src={assetsurl + 'ic_geo.png'} />
 			        <span className='lightgray'>{this.props.resto.status} {this.props.resto.hours}</span>
 		    	</div>
 	    	</div>
 
 			<div className='row' style={margin0}>
 				<div className='col-xs-12 padding-v badge-location'>
-			        <img className='badge-location-img' alt='' src={assetsurl + 'ic_geo.png'} />
+					<ImgCache
+						classNames={'badge-location-img'}
+						src={assetsurl + 'ic_geo.png'} />
 			        <span className='lightgray'>{this.props.resto.url}</span>
 		    	</div>
 	    	</div>
 
 			<div className='row' style={margin0}>
 				<div className='col-xs-12 padding-v badge-location'>
-			        <img className='badge-location-img' alt='' src={assetsurl + 'ic_geo.png'} />
+					<ImgCache
+						classNames={'badge-location-img'}
+						src={assetsurl + 'ic_geo.png'} />
 			        <span className='lightgray'>{this.props.resto.local}</span>
 		    	</div>
 	    	</div>
     	</div>
 
 		<div className='badge resto-badge col-xs-6 float-none'>
-				<img className='img-responsive col-xs-12 resto-map-img' alt=''
-					style={padding1}
-					src='https://s3.amazonaws.com/towncenterweb/tiendas/map/map_example.png' />
+			<ImgCache
+				classNames={'img-responsive col-xs-12 resto-map-img'}
+				styles={padding1}
+				src='https://s3.amazonaws.com/towncenterweb/tiendas/map/map_example.png' />
     	</div>
 	</div>
 	</div>
