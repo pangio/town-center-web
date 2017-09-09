@@ -35,19 +35,19 @@ class SliderStores extends React.Component {
           <div className="center">
             <NavLink to="/tiendas/Samsung%20Experience%20Store" >
               <ImgCache classNames={'img-responsive slider-store-img'}
-                        path={s3url + 'ic_samsung.png'} />
+                        src={s3url + 'ic_samsung.png'} />
             </NavLink>
           </div>
           <div className="center">
             <NavLink to="/tiendas/Puma" >
               <ImgCache classNames={'img-responsive slider-store-img'}
-                        path={s3url + 'ic_puma.png'} />
+                        src={s3url + 'ic_puma.png'} />
             </NavLink>
           </div>
           <div className="center">
             <NavLink to="/tiendas/Pandora" >
               <ImgCache classNames={'img-responsive slider-store-img'}
-                        path={s3url + 'ic_pandora.png'} />
+                        src={s3url + 'ic_pandora.png'} />
             </NavLink>
           </div>
         </Slider>

@@ -15,21 +15,21 @@ class Sections extends React.Component {
                     <NavLink to="/tiendas" >
                       <ImgCache
                         classNames={'img-responsive col-xs-3 sections-img'}
-                        path={s3url + 'btn_compras.png'} />
+                        src={s3url + 'btn_compras.png'} />
                     </NavLink>
                     <NavLink to="/" >
                       <ImgCache
                         classNames={'img-responsive col-xs-3 sections-img'}
-                        path={s3url + 'btn_eventos.png'} />
+                        src={s3url + 'btn_eventos.png'} />
                     </NavLink>
                     <NavLink to="/restaurantes" >
                       <ImgCache classNames={'img-responsive col-xs-3 sections-img'}
-                        path={s3url + 'btn_quieroiracomer.png'} />
+                        src={s3url + 'btn_quieroiracomer.png'} />
                     </NavLink>
                     <NavLink to="/cines" >
                       <ImgCache
                         classNames={'img-responsive col-xs-3 sections-img'}
-                        path={s3url + 'btn_vamosacine.png'} />
+                        src={s3url + 'btn_vamosacine.png'} />
                     </NavLink>
                 </div>
             </div>

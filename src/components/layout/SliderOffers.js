@@ -10,7 +10,7 @@ import ImgCache from './ImgCache'
 class SliderOffers extends React.Component {
     constructor(props) {
     super(props)
-      this.state = {
+    this.state = {
         settings: {
           autoplay: false,
           arrows: true,
@@ -18,7 +18,7 @@ class SliderOffers extends React.Component {
           dots: false,
           infinite: true,
           pauseOnHover: true,
-          slidesToShow: 1,
+          slidesToShow: 3,
           slidesToScroll: 1,
           speed: 500,
         },
@@ -55,45 +55,41 @@ class SliderOffers extends React.Component {
 
   render() {
     const s3url = 'https://s3.amazonaws.com/towncenterweb/ofertas/'
-    return (
-        <div>
-            <Slider {...this.state.settings}>
 
-            { this.props.children }
-            {
-              this.isLoaded() &&
-              <div>
-                <div className="center">
-                  <NavLink to="/ofertas" >
-                    <ImgCache
-                      classNames={'img-responsive slider-offer-img'}
-                      path={s3url + 'of1.png'} />
-                  </NavLink>
-                </div>
-                <div className="center">
-                  <NavLink to="/ofertas" >
-                    <ImgCache
-                      classNames={'img-responsive slider-offer-img'}
-                      path={s3url + 'of2.png'} />
-                  </NavLink>
-                </div>
-                <div className="center">
-                  <NavLink to="/ofertas" >
-                    <ImgCache
-                      classNames={'img-responsive slider-offer-img'}
-                      path={s3url + 'of3.png'} />
-                  </NavLink>
-                </div>
-                <div className="center">
-                  <NavLink to="/ofertas" >
-                    <ImgCache
-                      classNames={'img-responsive slider-offer-img'}
-                      path={s3url + 'of4.png'} />
-                  </NavLink>
-                </div>
-              </div>
-            }
-            </Slider>
+    return (
+      <div>
+        <Slider {...this.state.settings}>
+          <div className="center">
+            <NavLink to="/ofertas" >
+              <ImgCache classNames={'img-responsive slider-offer-img'}
+                        src={s3url + 'of1.png'} />
+            </NavLink>
+          </div>
+          <div className="center">
+            <NavLink to="/ofertas" >
+              <ImgCache classNames={'img-responsive slider-offer-img'}
+                        src={s3url + 'of2.png'} />
+            </NavLink>
+          </div>
+          <div className="center">
+            <NavLink to="/ofertas" >
+              <ImgCache classNames={'img-responsive slider-offer-img'}
+                        src={s3url + 'of3.png'} />
+            </NavLink>
+          </div>
+          <div className="center">
+            <NavLink to="/ofertas" >
+              <ImgCache classNames={'img-responsive slider-offer-img'}
+                        src={s3url + 'of4.png'} />
+            </NavLink>
+          </div>
+          <div className="center">
+            <NavLink to="/ofertas" >
+              <ImgCache classNames={'img-responsive slider-offer-img'}
+                        src={s3url + 'of5.png'} />
+            </NavLink>
+          </div>
+        </Slider>
       </div>
     )
   }
