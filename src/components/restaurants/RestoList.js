@@ -20,7 +20,7 @@ class RestoList extends React.Component {
 
   getCategories() {
     let options = []
-    let categories = _.pluck(this.props.restoList, 'category')
+    let categories = _.pluck(this.props.restoList, 'subcategory')
     categories = _.uniq(categories)
     categories = _.filter(categories, function(c) { return c !== undefined })
     _.each(categories, function(label,i){
@@ -54,8 +54,8 @@ class RestoList extends React.Component {
     let filteredRestoList = this.props.restoList.filter(
       (resto) => {
           return resto.name.toLowerCase().includes(this.state.search.toLowerCase()) &&
-              resto.category !== undefined && 
-              resto.category.toLowerCase() === this.state.selectedCategory.toLowerCase()
+              resto.subcategory !== undefined && 
+              resto.subcategory.toLowerCase() === this.state.selectedCategory.toLowerCase()
       }
     )
 

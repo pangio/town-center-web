@@ -19,7 +19,7 @@ class StoreList extends React.Component {
 
   getCategories() {
     let options = []
-    let categories = _.pluck(this.props.storeList, 'category')
+    let categories = _.pluck(this.props.storeList, 'subcategory')
     categories = _.uniq(categories)
     categories = _.filter(categories, function(c) { return c !== undefined })
     _.each(categories, function(label,i){
@@ -49,16 +49,14 @@ class StoreList extends React.Component {
     if (event) {      
       this.setState({selectedCategory: event.value})
     }
-
-    // console.log(this.state.selectedCategory)
   }
 
   render() {
     let filteredStores = this.props.storeList.filter(
       (store) => {
           return store.name.toLowerCase().includes(this.state.search.toLowerCase()) &&
-              store.category !== undefined && 
-              store.category.toLowerCase() === this.state.selectedCategory.toLowerCase()
+              store.subcategory !== undefined && 
+              store.subcategory.toLowerCase() === this.state.selectedCategory.toLowerCase()
       }
     )
 
