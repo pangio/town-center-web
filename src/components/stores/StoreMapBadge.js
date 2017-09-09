@@ -23,21 +23,21 @@ class StoreMapBadge extends React.Component {
 			<div className='row' style={margin0}>
 				<div className='col-xs-12 padding-v badge-location'>
 			        <img className='badge-location-img' alt='' src={assetsurl + 'ic_geo.png'} />
-			        <span className='lightgray'>Abierto {this.props.store.hours}</span>
+			        <span className='lightgray'>{this.props.store.status} {this.props.store.hours}</span>
 		    	</div>
 	    	</div>
 
 			<div className='row' style={margin0}>
 				<div className='col-xs-12 padding-v badge-location'>
 			        <img className='badge-location-img' alt='' src={assetsurl + 'ic_geo.png'} />
-			        <span className='lightgray'>Acerca de</span>
+			        <span className='lightgray'>{this.props.store.url}</span>
 		    	</div>
 	    	</div>
 
 			<div className='row' style={margin0}>
 				<div className='col-xs-12 padding-v badge-location'>
 			        <img className='badge-location-img' alt='' src={assetsurl + 'ic_geo.png'} />
-			        <span className='lightgray'>{this.props.store.level} - {this.props.store.local}</span>
+			        <span className='lightgray'>{this.props.store.local}</span>
 		    	</div>
 	    	</div>
     	</div>

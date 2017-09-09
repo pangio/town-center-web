@@ -87,7 +87,7 @@ class StoreList extends React.Component {
             {
               filteredStores.map((store, i) => {
                 return (
-                  <NavLink to={`/tiendas/${store.name}`} key={i} >
+                  <NavLink to={`/tiendas/${store.local}`} key={i} >
                       <StoreBadge store={store} key={i} />
                   </NavLink>
                 )

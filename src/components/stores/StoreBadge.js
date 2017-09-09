@@ -14,13 +14,13 @@ class StoreBadge extends React.Component {
 				src={s3url + this.props.store.image_url} />
 			<div className='col-xs-7 store-sm-txt'>
 				<p><strong>{this.props.store.name}</strong></p>
-				<p>{this.props.store.hours}</p>
+				<p>{this.props.store.status} {this.props.store.hours}</p>
 				<br />
 	    	</div>
 
 			<div className='col-xs-12 center padding-v badge-location'>
 		        <img alt='' src={assetsurl + 'ic_geo.png'} />
-		        <span className='lightgray'>{this.props.store.level} - {this.props.store.local}</span>
+		        <span className='lightgray'>{this.props.store.local}</span>
 	    	</div>
 
     	</div>

@@ -44,7 +44,7 @@ class Tiendas extends Component {
     		{
           this.isLoaded() &&
           <StoreList storeList={_.filter(this.state.stores, function(s) {
-            return s.type === 'store'
+            return s.category === 'store'
           })} />
         }
       </div>
