@@ -1,14 +1,16 @@
-import React from 'react';
+import React from 'react'
 import NavLink from '../NavLink'
 import Slider from 'react-slick'
-import 'slick-carousel/slick/slick-theme.css';
-import 'slick-carousel/slick/slick.css';
-import '../../main.css';
+import 'slick-carousel/slick/slick-theme.css'
+import 'slick-carousel/slick/slick.css'
+import '../../main.css'
+import _ from 'underscore'
+import ImgCache from './ImgCache'
 
 class SliderOffers extends React.Component {
     constructor(props) {
-    super(props);
-    this.state = {
+    super(props)
+      this.state = {
         settings: {
           autoplay: false,
           arrows: true,
@@ -16,55 +18,81 @@ class SliderOffers extends React.Component {
           dots: false,
           infinite: true,
           pauseOnHover: true,
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           speed: 500,
         },
+        sales: [],
     }
+    this.fetchAllSalesForHomeSlider = this.fetchAllSalesForHomeSlider.bind(this)
   }
 
   componentWillMount() {
+    console.log('fetching all Sales For Home Slider...')
+    this.fetchAllSalesForHomeSlider()
   }
+
+  fetchAllSalesForHomeSlider() {
+    // fetch('http://localhost:8000/api/ofertas')
+    // OFERTAS PARA HOME
+    fetch('http://192.168.0.9:8000/api/ofertas')
+      .then(response => response.json())
+      .then(response => {
+        let responseJson = JSON.parse(response.data)
+        responseJson = _.filter(responseJson, function(s) {
+            return s.image_url !== undefined
+          })
+        this.setState({ sales: responseJson })
+      })
+      .catch((error) => {
+        console.error(error)
+      })
+  }
+
+  isLoaded() {
+    return this.state.sales !== []
+  }
+
   render() {
+    const s3url = 'https://s3.amazonaws.com/towncenterweb/ofertas/'
     return (
         <div>
             <Slider {...this.state.settings}>
+
+            { this.props.children }
+            {
+              this.isLoaded() &&
+              <div>
                 <div className="center">
-                    <NavLink to="/ofertas/1" >
-                        <img className="img-responsive slider-offer-img" alt=''
-                            src={require('../../assets/ofertas/280x380_01.png')} />
-                    </NavLink>
+                  <NavLink to="/ofertas" >
+                    <ImgCache
+                      classNames={'img-responsive slider-offer-img'}
+                      path={s3url + 'of1.png'} />
+                  </NavLink>
                 </div>
                 <div className="center">
-                    <NavLink to="/ofertas/2" >
-                        <img className="img-responsive slider-offer-img" alt=''
-                            src={require('../../assets/ofertas/280x380_02.png')} />
-                    </NavLink>
+                  <NavLink to="/ofertas" >
+                    <ImgCache
+                      classNames={'img-responsive slider-offer-img'}
+                      path={s3url + 'of2.png'} />
+                  </NavLink>
                 </div>
                 <div className="center">
-                    <NavLink to="/ofertas/3" >
-                        <img className="img-responsive slider-offer-img" alt=''
-                            src={require('../../assets/ofertas/280x380_03.png')} />
-                    </NavLink>
+                  <NavLink to="/ofertas" >
+                    <ImgCache
+                      classNames={'img-responsive slider-offer-img'}
+                      path={s3url + 'of3.png'} />
+                  </NavLink>
                 </div>
                 <div className="center">
-                    <NavLink to="/ofertas/4" >
-                        <img className="img-responsive slider-offer-img" alt=''
-                            src={require('../../assets/ofertas/280x380_04.png')} />
-                    </NavLink>
+                  <NavLink to="/ofertas" >
+                    <ImgCache
+                      classNames={'img-responsive slider-offer-img'}
+                      path={s3url + 'of4.png'} />
+                  </NavLink>
                 </div>
-                <div className="center">
-                    <NavLink to="/ofertas/5" >
-                        <img className="img-responsive slider-offer-img" alt=''
-                            src={require('../../assets/ofertas/280x380_05.png')} />
-                    </NavLink>
-                </div>
-                <div className="center">
-                    <NavLink to="/ofertas/6" >
-                        <img className="img-responsive slider-offer-img" alt=''
-                            src={require('../../assets/ofertas/280x380_06.png')} />
-                    </NavLink>
-                </div>
+              </div>
+            }
             </Slider>
       </div>
     )
